@@ -1,0 +1,135 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(240, 20%, 18%);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+h1{
+  text-align: center;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 750px;
+  margin-inline: auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 20px;
+  min-width: 375px;
+}
+
+#info-container{
+  flex: 1;
+  width: 400px;
+  margin-top: 70px;
+}
+
+#image{
+  flex: 1;
+}
+
+
+#image-94{
+  min-width: 200px;
+}
+
+#checked-statement{
+  display: inline-block;
+}
+#checked-statement img, p{
+  display: inline-block;
+  margin-left: 6px;
+  margin-top: 1px;
+}
+#check-icon{
+  height: 15px;
+  width: 15px;
+}
+
+label{
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#email{
+  padding: 13px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  min-width: 330px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+button{
+  font-weight: bold;
+  background-color: hsl(226, 48%, 12%);
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  min-width: 355px;
+}
+button:active{
+  background: linear-gradient(90deg, hsla(350, 100%, 59%, 0.74), hsla(17, 100%, 50%, 0.726));
+  box-shadow: 0px 10px 8px 4px hsla(350, 100%, 59%, 0.2);
+  cursor: pointer;
+}
+
+.desktop-svg{
+  display: block;
+  width: 350px;
+  margin-left: 20px;
+  margin-right: 0px;
+}
+.mobile-svg{
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    background-color: white;
+  }
+
+  h1{
+    text-align: left;
+  }
+
+  main {
+    flex-direction: column;
+    height: 100vh;
+    min-width: unset;
+  }
+  
+  #image {
+    order: -1;/*This moves the image above the info container */
+    margin-bottom: -150px;
+  }
+  
+  #info-container {
+    margin-top: 5px;
+  }
+  /* Add these new styles */
+  .desktop-svg {
+    display: none;
+  }
+
+  .mobile-svg {
+    display: block; 
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .checked-container{
+    margin-left: 20px;
+  }
+
+  form{
+    margin-left: 13px;
+  }
+}
